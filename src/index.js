@@ -6,7 +6,6 @@ import './styles/styles.scss';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import IntlProviderWrapper from "./hoc/IntlProviderWrapper";
-import AppRouters from './routes/AppRoutes'
 
 import { Provider } from 'react-redux';
 // eslint-disable-next-line no-unused-vars
@@ -16,8 +15,7 @@ const renderApp = () => {
     ReactDOM.render(
         <Provider store={reduxStore}>
             <IntlProviderWrapper>
-                {/* <App persistor={persistor}/> */}
-                <AppRouters />
+                <App persistor={persistor} />
             </IntlProviderWrapper>
         </Provider>,
         document.getElementById('root')

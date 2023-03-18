@@ -10,14 +10,16 @@ import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authenticati
 
 import { path } from '../utils'
 
-import Home from '../routes/Home';
+import Home from '../components/HomePage/Home'
 import Login from '../routes/Login';
 import Header from './Header/Header';
 import System from '../routes/System';
-
+import './App.scss';
 import { CustomToastCloseButton } from '../components/CustomToast';
 import ConfirmModal from '../components/ConfirmModal';
 import adminService from '../services/adminService';
+import AppBar from '../components/layout/Appbar';
+import Footer from '../components/layout/Footer';
 
 class App extends Component {
 
@@ -49,12 +51,14 @@ class App extends Component {
                 <Router history={history}>
                     <div className="main-container">
                         <ConfirmModal />
-                        {this.props.isLoggedIn && <Header />}
+                        {this.props.isLoggedIn && <AppBar />}
                         <span className="content-container">
                             <Switch>
-                                <Route path={path.HOME} exact component={(Home)} />
+                                {/* <Route path={path.HOME} exact component={(Home)} />
                                 <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                <Route path={path.SYSTEM} component={userIsAuthenticated(System)} /> */}
+                                <Route path={path.HOME} exact component={(Home)} />
+
                             </Switch>
                         </span>
 
@@ -65,6 +69,7 @@ class App extends Component {
                             closeButton={<CustomToastCloseButton />}
                         />
                     </div>
+                    <Footer />
                 </Router>
             </Fragment>
         )

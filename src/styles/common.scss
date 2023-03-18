@@ -1,4 +1,7 @@
 @import "variables";
+body {
+    overflow: scroll;
+}
 
 .text-center {
     text-align: center !important;
