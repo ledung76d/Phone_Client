@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Marquee from "react-fast-marquee";
-import BlogCard from '../Product/BlogCard';
+import BlogCard from '../layout/Blogs/BlogCard';
 import ProductCard from '../Product/ProductCard';
 import SpecialProduct from '../Product/SpecialProduct'
 const Home = () => {

@@ -6,7 +6,7 @@ const ProductCard = (props) => {
     let location = useLocation()
     return (
         <>
-            <div className={`${location.pathname == "/store" ? `gr-${grid}` : "col-3"}`}>
+            <div className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}>
                 <Link to="/product/:id" className='product-card position-relative'>
                     <div className='wishlist-icon position-absolute'>
                         <Link>
@@ -14,8 +14,8 @@ const ProductCard = (props) => {
                         </Link>
                     </div>
                     <div className='product-image'>
-                        <img src='images/watch.jpg' className='img-fluid' alt='product image' />
-                        <img src='images/watch-1.jpg' className='img-fluid' alt='product image' />
+                        <img src='images/watch.jpg' className='img-fluid' alt='product image1' />
+                        <img src='images/watch-1.jpg' className='img-fluid' alt='product image2' />
                     </div>
 
                     <div className='product-details'>
@@ -56,7 +56,7 @@ const ProductCard = (props) => {
                     </div>
                 </Link>
             </div>
-            <div className={`${location.pathname == "/store" ? `gr-${grid}` : "col-3"}`}>
+            <div className={`${location.pathname === "/store" ? `gr-${grid}` : "col-3"}`}>
                 <Link to="/product/:id" className='product-card position-relative'>
                     <div className='wishlist-icon position-absolute'>
                         <Link>
@@ -64,8 +64,8 @@ const ProductCard = (props) => {
                         </Link>
                     </div>
                     <div className='product-image'>
-                        <img src='images/watch.jpg' className='img-fluid' alt='product image' />
-                        <img src='images/watch-1.jpg' className='img-fluid' alt='product image' />
+                        <img src='images/watch.jpg' className='img-fluid' alt='product image3' />
+                        <img src='images/watch-1.jpg' className='img-fluid' alt='product image4' />
                     </div>
 
                     <div className='product-details'>

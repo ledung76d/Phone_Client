@@ -26,7 +26,12 @@ const AppBar = () => {
                         <div className='col-2'>
                             <h3>
                                 <Link to="/" className='text-white'>
-                                    <img src='images/logoVT.png' className='img-fluid gap-15' style={{ width: "80px", height: "80px" }}></img>
+                                    <img
+                                        src='images/logoVT.png'
+                                        className='img-fluid gap-15'
+                                        style={{ width: "80px", height: "80px" }}
+                                        alt=""
+                                    />
                                 </Link>
                             </h3>
                         </div>
